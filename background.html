@@ -22,7 +22,7 @@
             success: function(resp) {
               if (resp.data) {
                 redditInfo.modhash = resp.data.modhash;
-                if(!(resp.data.children.length)){
+                if(!(resp.data.children.length==0)){
                   var info = resp.data.children[0].data;
                   redditInfo.setURL(info.url, info);
                   tabStatus.updateOverlay(info);
